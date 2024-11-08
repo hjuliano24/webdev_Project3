@@ -1,0 +1,193 @@
+/*Five of the same style elemnts for all the pages*/
+/*may need to get rid of section and just use div becasue section is used for headers and footers*/
+/*nav(aka button design)*/
+.header {
+  background-color: black;
+}
+
+.nav {
+  list-style-type: none;
+}
+
+a.button {
+  background-color: RoyalBlue;
+  padding: 1% 1%;
+  text-align: center;
+  font-size: 1em;
+  border-radius: 1em 1em 0em 0em;
+  color: white;
+  float :left;
+  margin-left: 2%;
+}
+
+a.button:hover {
+  background-color: darkblue;
+}
+
+.header {
+  align-content: center;
+}
+
+p, h1, h3, h4, h2, li, h5 {
+  text-align: center;
+}
+
+.footer {
+  padding-bottom: 1%;
+  padding-top: 1%;
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer > p {
+  color: white;
+}
+
+/*Five different styles for each pages*/
+/*index*/
+/* bottom and top borders and website font */
+/*5 unique propertys: border-bottom-style: solid;, list-style-position: inside; text-decoration: overline underline; text-decoration-color: RoyalBlue; text-transform: uppercase;*/
+#resume {
+  font-style: oblique;
+} 
+
+.resume_content > h2{
+  text-decoration: overline underline;
+  text-decoration-color: RoyalBlue;
+}
+
+.resume_content {
+   border-bottom-style: solid;
+   background-color: lightgrey;
+   padding-left: 5%;
+   padding-right: 5%;
+   padding-top: 0.1%;
+   margin-bottom: 1%;
+}
+
+#ressum_content{
+  text-transform: capitalize;
+}
+
+ul.resume_list {
+  list-style-position: inside;
+}
+
+/*trees*/
+/*rounded borders for the images */
+/*fixed width*/
+/*5 unique propertys: font-style: normal; border: 0.25em solid black; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); filter: brightness(110%); margin-top: 1%;*/
+#trees {
+  font-family: "Playwrite GB S", cursive;
+  font-style: normal;
+}
+
+#trees_content {
+  margin-left: 125px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 25px;
+  width: 1000px  ;
+}
+
+.trees {
+  border-radius: 1px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 900px;
+  background-color: #004953;
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 25px;
+}
+
+.h3_trees {
+ padding: 1px;
+}
+
+img.treesIMG {
+  filter: brightness(110%);
+  width: 350px;
+  border: 5px solid black;
+  border-radius: 25px;
+  margin: 1px;
+  margin-left: 29%;
+}   
+
+#trees{
+  background-color: RoyalBlue;
+}
+
+/*cat*/
+/*with border weight on images*/
+/*fluid layout- flex use percentage i guess*/
+/*mobile first maybe */
+/*5 unique propertys: display: block; height: auto; top: 0; bottom: 0; left: 0; right: 0;*/
+#cat {
+  font-style: italic;
+}
+
+#cat_intro {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin: 0%;
+  background-color: RoyalBlue;
+}
+
+#cat_intro > h1, #cat_intro > p {
+  color: white;
+}
+
+#cat_content > div {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-bottom: 1%;
+}
+
+.container > img {
+   margin-left: 40%;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 1%;
+  left: 42.7%;
+  right: 0;
+  height: 100%;
+  width: 57%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: RoyalBlue;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#cat_video {
+  margin-top: 2%;
+  background-color: RoyalBlue;
+}
