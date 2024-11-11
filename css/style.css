@@ -94,18 +94,95 @@ ul.resume_list {
 }
 
 .trees {
-  border-radius: 1px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  width: 900px;
-  background-color: #004953;
-  padding-left: 50px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin: 25px;
+    border-radius: 1px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 900px;
+    background-color: #90ee90;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 25px;
 }
 
 .h3_trees {
  padding: 1px;
+}
+
+#trees{
+  background-color: RoyalBlue;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.image-sliderfade {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: black;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 
 img.treesIMG {
@@ -113,13 +190,13 @@ img.treesIMG {
   width: 350px;
   border: 5px solid black;
   border-radius: 25px;
-  margin: 1px;
-  margin-left: 29%;
+  margin: 1px;  
 }   
 
-#trees{
-  background-color: RoyalBlue;
-}
+
+
+
+
 
 /*cat*/
 /*with border weight on images*/
@@ -190,4 +267,32 @@ img.treesIMG {
 #cat_video {
   margin-top: 2%;
   background-color: RoyalBlue;
+}
+
+/*  For MAP's API*/
+#map {
+  height: 100%;
+  margin: 0;
+}
+
+gmpx-store-locator {
+  width: 100%;
+  height: 100%;
+  /* These parameters customize the appearance of Locator Plus. See the documentation at
+  https://github.com/googlemaps/extended-component-library/blob/main/src/store_locator/README.md
+  for more information. */
+  --gmpx-color-surface: #fff;
+  --gmpx-color-on-surface: #212121;
+  --gmpx-color-on-surface-variant: #757575;
+  --gmpx-color-primary: #1967d2;
+  --gmpx-color-outline: #e0e0e0;
+  --gmpx-fixed-panel-width-row-layout: 28.5em;
+  --gmpx-fixed-panel-height-column-layout: 65%;
+  --gmpx-font-family-base: "Roboto", sans-serif;
+  --gmpx-font-family-headings: "Roboto", sans-serif;
+  --gmpx-font-size-base: 0.875rem;
+  --gmpx-hours-color-open: #188038;
+  --gmpx-hours-color-closed: #d50000;
+  --gmpx-rating-color: #ffb300;
+  --gmpx-rating-color-empty: #e0e0e0;
 }
