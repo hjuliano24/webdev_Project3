@@ -318,12 +318,12 @@ img.treesIMG {
 }
 
 /*  For MAP's API*/
-#map {
+.map html, .map body{
   height: 100%;
   margin: 0;
 }
 
-gmpx-store-locator {
+.map gmpx-store-locator {
   width: 100%;
   height: 100%;
   /* These parameters customize the appearance of Locator Plus. See the documentation at

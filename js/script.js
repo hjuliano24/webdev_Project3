@@ -36,4 +36,17 @@ function showSlides(n) {
 
 //for the API maps
 
+const CONFIGURATION = {
+  "locations": [
+  {"title":"Illinois Institute of Technology Academic Campus","address1":"3300 S Federal St","address2":"Chicago, IL 60616, USA","coords":{"lat":41.83446952994897,"lng":-87.62930912209013},"placeId":"ChIJxTColxIsDogR1I20Cuv5mag"}
+  ],
+  "mapOptions": {"center":{"lat":38.0,"lng":-100.0},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":false,"zoom":4,"zoomControl":true,"maxZoom":17,"mapId":""},
+  "mapsApiKey": "YOUR_API_KEY_HERE",
+  "capabilities": {"input":false,"autocomplete":false,"directions":false,"distanceMatrix":false,"details":false,"actions":false}
+};
 
+document.addEventListener('DOMContentLoaded', async () => {
+  await customElements.whenDefined('gmpx-store-locator');
+  const locator = document.querySelector('gmpx-store-locator');
+  locator.configureFromQuickBuilder(CONFIGURATION);
+});
