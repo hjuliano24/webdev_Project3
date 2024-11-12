@@ -281,10 +281,6 @@ img.treesIMG {
   margin-bottom: 1%;
 }
 
-.container > img {
-   margin-left: 40%;
-}
-
 .container {
   position: relative;
   width: 50%;
@@ -294,10 +290,10 @@ img.treesIMG {
   position: absolute;
   top: 0;
   bottom: 1%;
-  left: 42.7%;
+  left: 20%;
   right: 0;
   height: 100%;
-  width: 57%;
+  width: 79%;
   opacity: 0;
   transition: .5s ease;
   background-color: RoyalBlue;

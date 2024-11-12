@@ -7,6 +7,7 @@
 if (document.body.classList.contains('map-page')) {
   function init() {
     async function initMap() {
+    
     // The location of Uluru
     const position = {lat: 41.8367, lng: -87.6260};
     // Request needed libraries.
