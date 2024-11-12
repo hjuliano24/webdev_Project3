@@ -4,65 +4,59 @@
 
 //for the API maps
 // Initialize and add the map
-// Initialize and add the map
-function init() {
-
-  async function initMap() {
-  // The location of Uluru
-  const position = {lat: 41.8367, lng: -87.6260};
-  // Request needed libraries.
-  //@ts-ignore
-  const { Map } = await google.maps.importLibrary("maps");
-  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-
-  // The map, centered at Uluru
-  map = new Map(document.getElementById("map"), {
-    zoom: 15,
-    center: position,
-    mapId: "befb6f94c2eb29a2",
-  });
-
-  // The marker, positioned at Uluru
-  const marker = new AdvancedMarkerElement({
-    map: map,
-    position: position,
-    title: "Illinois Institute of Technology",
-  });
+if (document.body.classList.contains('map-page')) {
+  function init() {
+    async function initMap() {
+    // The location of Uluru
+    const position = {lat: 41.8367, lng: -87.6260};
+    // Request needed libraries.
+    //@ts-ignore
+    const { Map } = await google.maps.importLibrary("maps");
+    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+    // The map, centered at Uluru
+    map = new Map(document.getElementById("map"), {
+      zoom: 15,
+      center: position,
+      mapId: "befb6f94c2eb29a2",
+    });
+    // The marker, positioned at Uluru
+    const marker = new AdvancedMarkerElement({
+      map: map,
+      position: position,
+      title: "Illinois Institute of Technology",
+    });
+  }
+  initMap();
+  }
+  window.addEventListener("load", init);
 }
-
-initMap();
-}
-
-window.addEventListener("load", init);
 
 //For trees slider
-let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+if (document.body.classList.contains('trees-page')) {
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
   }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+  }
 }
-
 
