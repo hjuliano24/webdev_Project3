@@ -1,6 +1,18 @@
 /*Five of the same style elemnts for all the pages*/
 /*may need to get rid of section and just use div becasue section is used for headers and footers*/
 /*nav(aka button design)*/
+/*  For MAP's API*/
+#map {
+  display: block;
+  height: 400px; /* The height is 400 pixels */
+  width: 100%; /* The width is the width of the web page */
+  }
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 .header {
   background-color: black;
 }
@@ -239,12 +251,7 @@ img.treesIMG {
   border: 5px solid black;
   border-radius: 25px;
   margin: 1px;  
-}   
-
-
-
-
-
+}
 
 /*cat*/
 /*with border weight on images*/
@@ -317,30 +324,3 @@ img.treesIMG {
   background-color: RoyalBlue;
 }
 
-/*  For MAP's API*/
-.map html, .map body{
-  height: 100%;
-  margin: 0;
-}
-
-.map gmpx-store-locator {
-  width: 100%;
-  height: 100%;
-  /* These parameters customize the appearance of Locator Plus. See the documentation at
-  https://github.com/googlemaps/extended-component-library/blob/main/src/store_locator/README.md
-  for more information. */
-  --gmpx-color-surface: #fff;
-  --gmpx-color-on-surface: #212121;
-  --gmpx-color-on-surface-variant: #757575;
-  --gmpx-color-primary: #1967d2;
-  --gmpx-color-outline: #e0e0e0;
-  --gmpx-fixed-panel-width-row-layout: 28.5em;
-  --gmpx-fixed-panel-height-column-layout: 65%;
-  --gmpx-font-family-base: "Roboto", sans-serif;
-  --gmpx-font-family-headings: "Roboto", sans-serif;
-  --gmpx-font-size-base: 0.875rem;
-  --gmpx-hours-color-open: #188038;
-  --gmpx-hours-color-closed: #d50000;
-  --gmpx-rating-color: #ffb300;
-  --gmpx-rating-color-empty: #e0e0e0;
-}
