@@ -5,32 +5,39 @@
 //for the API maps
 // Initialize and add the map
 if (document.body.classList.contains('map-page')) {
+  
   function init() {
     async function initMap() {
 
-    // The location of Uluru
-    const position = {lat: 41.8367, lng: -87.6260};
-    // Request needed libraries.
-    //@ts-ignore
-    const { Map } = await google.maps.importLibrary("maps");
-    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-    // The map, centered at Uluru
-    map = new Map(document.getElementById("map"), {
-      zoom: 15,
-      center: position,
-      mapId: "befb6f94c2eb29a2",
-    });
-    // The marker, positioned at Uluru
-    const marker = new AdvancedMarkerElement({
-      map: map,
-      position: position,
-      title: "Illinois Institute of Technology",
-    });
-  }
-  initMap();
+      // The location
+      const position = {lat: 41.8367, lng: -87.6260};
+      // Request needed libraries.
+      //@ts-ignore
+      const { Map } = await google.maps.importLibrary("maps");
+      const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+      // The map
+      map = new Map(document.getElementById("map"), {
+        scaleControl: true,
+        zoom: 15,
+        center: position,
+        mapId: "befb6f94c2eb29a2",
+      });
+      // The marker
+      const marker = new AdvancedMarkerElement({
+        map: map,
+        position: position,
+        title: "Illinois Institute of Technology",
+      });
+      
+      //test
+      
+    }
+    initMap();
   }
   window.addEventListener("load", init);
 }
+
+
 
 //For trees slider
 if (document.body.classList.contains('trees-page')) {
