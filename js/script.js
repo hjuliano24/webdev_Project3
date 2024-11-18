@@ -22,6 +22,27 @@ if (document.body.classList.contains('map-page')) {
         center: position,
         mapId: "befb6f94c2eb29a2",
       });
+      
+      const contentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<h1 id="firstHeading" class="firstHeading">Illinois Institute of Technology</h1>' +
+        '<div id="bodyContent">' +
+        "<p><b>Illinois Institute of Technology</b>, also referred to as <b>IIT</b>, is a private " +
+        "research university in Chicago, Illinois, United States." +
+        "Tracing its history to 1890, the present name was " +
+        "adopted upon the merger of the Armour Institute and Lewis Institute in 1940.</p>" +
+        '<p>Attribution: IIT, <a href="https://en.wikipedia.org/wiki/Illinois_Institute_of_Technology">' +
+        "https://en.wikipedia.org/wiki/Illinois_Institute_of_Technology</a> " +
+        "</p>" +
+        "</div>" +
+        "</div>";
+      const infowindow = new google.maps.InfoWindow({
+        content: contentString,
+        ariaLabel: "Uluru",
+      });
+      
       // The marker
       const marker = new AdvancedMarkerElement({
         map: map,
@@ -30,7 +51,12 @@ if (document.body.classList.contains('map-page')) {
       });
       
       //test
-      
+      marker.addListener("click", () => {
+        infowindow.open({
+          anchor: marker,
+          map,
+        });
+      });
     }
     initMap();
   }
